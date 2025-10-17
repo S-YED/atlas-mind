@@ -7,13 +7,79 @@ export type Json =
   | Json[]
 
 export type Database = {
-  // Allows to automatically instanciate createClient with right options
+  // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
     PostgrestVersion: "12.2.12 (cd3cf9e)"
   }
   public: {
     Tables: {
+      ai_recommendations: {
+        Row: {
+          confidence_score: number | null
+          created_at: string
+          expires_at: string | null
+          id: string
+          reasoning: string | null
+          suggested_module_ids: Json
+          user_id: string
+        }
+        Insert: {
+          confidence_score?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          reasoning?: string | null
+          suggested_module_ids?: Json
+          user_id: string
+        }
+        Update: {
+          confidence_score?: number | null
+          created_at?: string
+          expires_at?: string | null
+          id?: string
+          reasoning?: string | null
+          suggested_module_ids?: Json
+          user_id?: string
+        }
+        Relationships: []
+      }
+      learning_modules: {
+        Row: {
+          ai_tags: string[] | null
+          content: Json
+          created_at: string
+          description: string
+          estimated_time_minutes: number
+          id: string
+          level: Database["public"]["Enums"]["difficulty_level"]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          ai_tags?: string[] | null
+          content?: Json
+          created_at?: string
+          description: string
+          estimated_time_minutes?: number
+          id?: string
+          level?: Database["public"]["Enums"]["difficulty_level"]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          ai_tags?: string[] | null
+          content?: Json
+          created_at?: string
+          description?: string
+          estimated_time_minutes?: number
+          id?: string
+          level?: Database["public"]["Enums"]["difficulty_level"]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -53,6 +119,44 @@ export type Database = {
         }
         Relationships: []
       }
+      progress_logs: {
+        Row: {
+          completed_at: string | null
+          completion_score: number | null
+          created_at: string
+          id: string
+          module_id: string
+          time_spent_minutes: number | null
+          user_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          completion_score?: number | null
+          created_at?: string
+          id?: string
+          module_id: string
+          time_spent_minutes?: number | null
+          user_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          completion_score?: number | null
+          created_at?: string
+          id?: string
+          module_id?: string
+          time_spent_minutes?: number | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "progress_logs_module_id_fkey"
+            columns: ["module_id"]
+            isOneToOne: false
+            referencedRelation: "learning_modules"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -61,7 +165,7 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      difficulty_level: "beginner" | "intermediate" | "advanced"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -188,6 +292,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      difficulty_level: ["beginner", "intermediate", "advanced"],
+    },
   },
 } as const
