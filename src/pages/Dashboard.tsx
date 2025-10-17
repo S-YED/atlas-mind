@@ -3,20 +3,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { 
-  BookOpen, 
-  Brain, 
-  Clock, 
-  Trophy, 
+import { Skeleton } from '@/components/ui/skeleton';
+import { useToast } from '@/hooks/use-toast';
+import {
+  BookOpen,
+  Brain,
+  Clock,
+  Trophy,
   TrendingUp,
   Play,
   CheckCircle,
   Star,
-  Zap
+  Zap,
+  RefreshCw,
+  Loader2
 } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { generateRecommendations, getLatestRecommendations, getModulesByIds } from '@/lib/ai';
 
 export default function Dashboard() {
   const { user } = useAuth();
+  const { toast } = useToast();
+  const [aiLoading, setAiLoading] = useState(false);
+  const [recommendations, setRecommendations] = useState<any[]>([]);
+  const [recommendationReasoning, setRecommendationReasoning] = useState<string[]>([]);
 
   const firstName = user?.user_metadata?.first_name || 'Student';
 
@@ -53,6 +63,77 @@ export default function Dashboard() {
     { name: "First Course", icon: "🎯", unlocked: true },
     { name: "AI Assistant", icon: "🤖", unlocked: false },
   ];
+
+  useEffect(() => {
+    loadRecommendations();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id]);
+
+  const loadRecommendations = async () => {
+    if (!user?.id) return;
+
+    try {
+      setAiLoading(true);
+      const existingRec = await getLatestRecommendations(user.id);
+
+      if (existingRec && existingRec.suggested_module_ids) {
+        const modules = await getModulesByIds(existingRec.suggested_module_ids);
+        setRecommendations(modules || []);
+
+        if (existingRec.reasoning) {
+          setRecommendationReasoning(existingRec.reasoning.split('\n').filter(Boolean));
+        }
+      } else {
+        setRecommendations([]);
+        setRecommendationReasoning([]);
+      }
+    } catch (error) {
+      console.error('Error loading recommendations:', error);
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const handleGenerateRecommendations = async () => {
+    if (!user?.id) return;
+
+    try {
+      setAiLoading(true);
+      const response = await generateRecommendations(user.id);
+
+      if (response.success && response.recommendation.suggested_module_ids) {
+        const modules = await getModulesByIds(response.recommendation.suggested_module_ids);
+        setRecommendations(modules || []);
+
+        if (response.recommendation.reasoning) {
+          setRecommendationReasoning(response.recommendation.reasoning.split('\n').filter(Boolean));
+        }
+
+        toast({
+          title: "Recommendations generated",
+          description: "Your personalized learning path is ready!",
+        });
+      }
+    } catch (error: any) {
+      console.error('Error generating recommendations:', error);
+
+      let errorMessage = "Failed to generate recommendations. Please try again.";
+
+      if (error.message?.includes("rate limited")) {
+        errorMessage = "AI service is currently rate limited. Please try again in a moment.";
+      } else if (error.message?.includes("not configured")) {
+        errorMessage = "AI service is not configured. Please contact administrator.";
+      }
+
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    } finally {
+      setAiLoading(false);
+    }
+  };
 
   return (
     <div className="flex-1 space-y-6 p-6">
@@ -168,29 +249,62 @@ export default function Dashboard() {
           {/* AI Recommendations */}
           <Card className="border-accent/20 bg-gradient-to-r from-accent/5 to-primary/5">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Brain className="h-5 w-5 text-accent" />
-                AI Recommendations
-              </CardTitle>
-              <CardDescription>
-                Personalized suggestions based on your learning pattern
-              </CardDescription>
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="flex items-center gap-2">
+                    <Brain className="h-5 w-5 text-accent" />
+                    AI Recommendations
+                  </CardTitle>
+                  <CardDescription>
+                    Personalized suggestions based on your learning pattern
+                  </CardDescription>
+                </div>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={handleGenerateRecommendations}
+                  disabled={aiLoading}
+                >
+                  {aiLoading ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <RefreshCw className="h-4 w-4" />
+                  )}
+                </Button>
+              </div>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
-                  <div className="w-2 h-2 rounded-full bg-accent"></div>
-                  <span className="text-sm">Focus on JavaScript debugging techniques - you're 23% faster than average</span>
+              {aiLoading ? (
+                <div className="space-y-3">
+                  <Skeleton className="h-16 w-full" />
+                  <Skeleton className="h-16 w-full" />
+                  <Skeleton className="h-16 w-full" />
                 </div>
-                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
-                  <div className="w-2 h-2 rounded-full bg-primary"></div>
-                  <span className="text-sm">Consider adding Python to your learning path for ML course synergy</span>
+              ) : recommendations.length > 0 ? (
+                <div className="space-y-3">
+                  {recommendations.slice(0, 3).map((module, index) => (
+                    <div
+                      key={module.id}
+                      className="flex items-start gap-3 p-3 bg-background/50 rounded-lg hover:bg-background/80 transition-colors"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0"></div>
+                      <div className="flex-1 space-y-1">
+                        <p className="text-sm font-medium">{module.title}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {recommendationReasoning[index] || module.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
-                  <div className="w-2 h-2 rounded-full bg-secondary"></div>
-                  <span className="text-sm">Schedule 20-minute review sessions for better retention</span>
+              ) : (
+                <div className="text-center py-6 space-y-3">
+                  <Brain className="h-12 w-12 text-muted-foreground mx-auto opacity-50" />
+                  <p className="text-sm text-muted-foreground">
+                    No recommendations yet. Click the refresh button to get personalized suggestions!
+                  </p>
                 </div>
-              </div>
+              )}
             </CardContent>
           </Card>
         </div>
