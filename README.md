@@ -1,73 +1,214 @@
-# Welcome to your Lovable project
+# 🧠 Atlas Mind - AI-Powered Learning Platform
 
-## Project info
+> **Personalized learning experience powered by AI. Master new skills with adaptive courses, progress tracking, and intelligent recommendations.**
 
-**URL**: https://lovable.dev/projects/c3b9a9e3-f9a7-4b32-8bba-53c5bc14ffe9
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/atlas-mind)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/atlas-mind)
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+### 🎯 Core Learning Features
+- **AI-Powered Recommendations** - Personalized course suggestions based on your progress
+- **Interactive Courses** - Rich content with sections, code examples, and resources
+- **Progress Tracking** - Detailed analytics with charts and insights
+- **Achievement System** - Unlock badges and earn points as you learn
+- **Adaptive Learning Paths** - AI adjusts difficulty based on your performance
 
-**Use Lovable**
+### 🚀 Technical Features
+- **Progressive Web App (PWA)** - Install as native app on mobile/desktop
+- **Offline Support** - Continue learning without internet connection
+- **Real-time Sync** - Progress synced across all devices
+- **Mobile Responsive** - Optimized for all screen sizes
+- **Dark/Light Theme** - Comfortable learning in any environment
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c3b9a9e3-f9a7-4b32-8bba-53c5bc14ffe9) and start prompting.
+### 🔧 Developer Features
+- **TypeScript** - Full type safety
+- **Modern React** - Hooks, Suspense, Error Boundaries
+- **Supabase Backend** - Authentication, database, edge functions
+- **OpenAI Integration** - GPT-4 powered recommendations
+- **Framer Motion** - Smooth animations and transitions
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🏗️ Tech Stack
 
-**Use your preferred IDE**
+**Frontend:**
+- React 18 + TypeScript
+- Vite (Build tool)
+- Tailwind CSS + shadcn/ui
+- Framer Motion (Animations)
+- React Query (State management)
+- React Router (Navigation)
+- Recharts (Data visualization)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Backend:**
+- Supabase (Database + Auth)
+- PostgreSQL (Database)
+- Edge Functions (Serverless)
+- OpenAI API (AI recommendations)
+- Row Level Security (RLS)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Deployment:**
+- Netlify / Vercel (Frontend)
+- Supabase (Backend)
+- PWA Support
 
-Follow these steps:
+## 🚀 Quick Start
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js 18+ and npm
+- Supabase account
+- OpenAI API key (optional, for AI features)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 1. Clone & Install
+```bash
+git clone https://github.com/your-username/atlas-mind.git
+cd atlas-mind
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 2. Environment Setup
+```bash
+cp .env.example .env.local
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Update `.env.local` with your Supabase credentials:
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### 3. Database Setup
+1. Create a new Supabase project
+2. Run the migrations in `/supabase/migrations/`
+3. Set up the AI edge function (optional)
+
+### 4. Development
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:8080](http://localhost:8080)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Deployment
 
-**Use GitHub Codespaces**
+### Netlify (Recommended)
+1. Connect your GitHub repo to Netlify
+2. Set environment variables in Netlify dashboard
+3. Deploy automatically on push to main
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Vercel
+1. Import project to Vercel
+2. Set environment variables
+3. Deploy
 
-## What technologies are used for this project?
+### Manual Build
+```bash
+npm run build
+npm run preview
+```
 
-This project is built with:
+## 🗄️ Database Schema
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Core Tables
+- `profiles` - User profiles and preferences
+- `learning_modules` - Course content and metadata
+- `progress_logs` - User progress tracking
+- `ai_recommendations` - AI-generated suggestions
 
-## How can I deploy this project?
+### Key Features
+- Row Level Security (RLS) enabled
+- Real-time subscriptions
+- Automatic timestamps
+- JSON fields for flexible content
 
-Simply open [Lovable](https://lovable.dev/projects/c3b9a9e3-f9a7-4b32-8bba-53c5bc14ffe9) and click on Share -> Publish.
+## 🤖 AI Integration
 
-## Can I connect a custom domain to my Lovable project?
+The platform uses OpenAI GPT-4 for:
+- Personalized course recommendations
+- Learning path optimization
+- Content difficulty assessment
+- Progress analysis
 
-Yes, you can!
+**Edge Function:** `/supabase/functions/ai-personalize/`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📱 PWA Features
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- **Installable** - Add to home screen
+- **Offline Support** - Service worker caching
+- **Push Notifications** - Learning reminders
+- **Background Sync** - Sync when online
+
+## 🎨 UI/UX Features
+
+- **Responsive Design** - Mobile-first approach
+- **Accessibility** - WCAG compliant
+- **Dark/Light Theme** - System preference detection
+- **Smooth Animations** - Framer Motion powered
+- **Loading States** - Skeleton screens
+- **Error Boundaries** - Graceful error handling
+
+## 📊 Analytics & Monitoring
+
+- **User Analytics** - Learning behavior tracking
+- **Performance Monitoring** - Core Web Vitals
+- **Error Tracking** - Production error monitoring
+- **A/B Testing** - Feature experimentation
+
+## 🔒 Security
+
+- **Authentication** - Supabase Auth
+- **Authorization** - Row Level Security
+- **Data Validation** - Zod schemas
+- **HTTPS Only** - Secure connections
+- **Content Security Policy** - XSS protection
+
+## 🧪 Testing
+
+```bash
+# Run tests
+npm run test
+
+# E2E tests
+npm run test:e2e
+
+# Coverage
+npm run test:coverage
+```
+
+## 📈 Performance
+
+- **Code Splitting** - Lazy loading
+- **Image Optimization** - WebP format
+- **Bundle Analysis** - Webpack bundle analyzer
+- **Caching Strategy** - Service worker + CDN
+- **Core Web Vitals** - Optimized for performance
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Supabase](https://supabase.com) - Backend infrastructure
+- [OpenAI](https://openai.com) - AI recommendations
+- [shadcn/ui](https://ui.shadcn.com) - UI components
+- [Lucide](https://lucide.dev) - Icons
+- [Recharts](https://recharts.org) - Data visualization
+
+## 📞 Support
+
+- 📧 Email: support@atlas-mind.app
+- 💬 Discord: [Join our community](https://discord.gg/atlas-mind)
+- 📖 Docs: [Documentation](https://docs.atlas-mind.app)
+- 🐛 Issues: [GitHub Issues](https://github.com/your-username/atlas-mind/issues)
+
+---
+
+**Built with ❤️ for learners everywhere**
