@@ -77,8 +77,17 @@ export default function Dashboard() {
       const existingRec = await getLatestRecommendations(user.id);
 
       if (existingRec && existingRec.suggested_module_ids) {
-        const modules = await getModulesByIds(existingRec.suggested_module_ids);
-        setRecommendations(modules || []);
+        // Type guard: ensure suggested_module_ids is actually a string array
+        const moduleIds = Array.isArray(existingRec.suggested_module_ids) 
+          ? existingRec.suggested_module_ids.filter((id): id is string => typeof id === 'string')
+          : [];
+        
+        if (moduleIds.length > 0) {
+          const modules = await getModulesByIds(moduleIds);
+          setRecommendations(modules || []);
+        } else {
+          setRecommendations([]);
+        }
 
         if (existingRec.reasoning) {
           setRecommendationReasoning(existingRec.reasoning.split('\n').filter(Boolean));
@@ -102,8 +111,17 @@ export default function Dashboard() {
       const response = await generateRecommendations(user.id);
 
       if (response.success && response.recommendation.suggested_module_ids) {
-        const modules = await getModulesByIds(response.recommendation.suggested_module_ids);
-        setRecommendations(modules || []);
+        // Type guard: ensure suggested_module_ids is actually a string array
+        const moduleIds = Array.isArray(response.recommendation.suggested_module_ids)
+          ? response.recommendation.suggested_module_ids
+          : [];
+        
+        if (moduleIds.length > 0) {
+          const modules = await getModulesByIds(moduleIds);
+          setRecommendations(modules || []);
+        } else {
+          setRecommendations([]);
+        }
 
         if (response.recommendation.reasoning) {
           setRecommendationReasoning(response.recommendation.reasoning.split('\n').filter(Boolean));
