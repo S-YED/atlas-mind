@@ -210,10 +210,10 @@ atlas-mind/
 
 ---
 
-<h2 align="center" style="color: #3B82F6;">🌟 SWOC 2024 🌟</h2>
+<h2 align="center" style="color: #3B82F6;">🌟 SWOC 2025 🌟</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SWOC-2024-orange?style=for-the-badge&logo=github" alt="SWOC 2024" />
+  <img src="https://img.shields.io/badge/SWOC-2024-orange?style=for-the-badge&logo=github" alt="SWOC 2025" />
   <img src="https://img.shields.io/badge/Open%20Source-❤️-red?style=for-the-badge" alt="Open Source" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" alt="Contributions Welcome" />
 </p>
