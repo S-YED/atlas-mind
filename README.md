@@ -133,7 +133,7 @@
       <p align="center" style="margin-top: 5px; font-style: italic;">Immersive landing page with AI focus</p>
     </td>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/dashboard.png" alt="Atlas Mind Dashboard" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/dashboard.png" alt="Atlas Mind Dashboard" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">Personalized learning dashboard</p>
     </td>
   </tr>
@@ -146,11 +146,11 @@
   </tr>
   <tr>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/ai-tutor.png" alt="AI Tutor" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/ai-tutor.png" alt="AI Tutor" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">AI-powered personalized recommendations</p>
     </td>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/progress.png" alt="Progress Analytics" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/progress.png" alt="Progress Analytics" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">Detailed progress tracking and analytics</p>
     </td>
   </tr>
