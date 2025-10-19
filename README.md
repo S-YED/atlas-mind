@@ -10,18 +10,14 @@
 ---
 
 <h2 align="center" style="color: #3B82F6;">🔧 Tech Stack 🔧</h2>
-<p align="center">
-  <a href="https://reactjs.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/react-native.png" alt="React" /> </a>
-  <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" /> </a>
-  <a href="https://supabase.com/" target="_blank"> <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" /> </a>
-  <a href="https://nodejs.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" /> </a>
-  <a href="https://tailwindcss.com/" target="_blank"> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" /> </a>
-  <a href="https://openai.com/" target="_blank"> <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI" /> </a>
-</p>
 
-<h3 align="center" style="color: #8B5CF6;">
-    <a href="https://atlas-mind.netlify.app/" target="_blank">🌐 Live Demo 🌐</a>
-</h3>
+<div align="center">
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tailwind_css.png" alt="Tailwind CSS" title="Tailwind CSS"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/supabase.png" alt="Supabase" title="Supabase"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/shadcn_ui.png" alt="ShadCn UI" title="ShadCn UI"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" title="React"/></code>
+	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" title="Node.js"/></code>
+</div>
 
 ---
 
@@ -129,11 +125,11 @@
   </tr>
   <tr>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/landing.png" alt="Atlas Mind Landing" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/Landing.png" alt="Atlas Mind Landing" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">Immersive landing page with AI focus</p>
     </td>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/dashboard.png" alt="Atlas Mind Dashboard" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/dashboard.png" alt="Atlas Mind Dashboard" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">Personalized learning dashboard</p>
     </td>
   </tr>
@@ -146,11 +142,11 @@
   </tr>
   <tr>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/ai-tutor.png" alt="AI Tutor" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/ai-tutor.png" alt="AI Tutor" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">AI-powered personalized recommendations</p>
     </td>
     <td style="padding: 10px; border: 1px solid #ddd;">
-      <img src="./docs/images/progress.png" alt="Progress Analytics" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      <img src="./public/progress.png" alt="Progress Analytics" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
       <p align="center" style="margin-top: 5px; font-style: italic;">Detailed progress tracking and analytics</p>
     </td>
   </tr>
@@ -195,12 +191,10 @@ atlas-mind/
 
 <h3 align="center" style="color: #3B82F6;">🛠️ Open Source Contributors 🛠️</h3>
 <p align="center">
-  <img src="https://img.shields.io/github/contributors/S-YED/atlas-mind?style=for-the-badge&color=blue" alt="Contributors" />
-  <img src="https://img.shields.io/github/forks/S-YED/atlas-mind?style=for-the-badge&color=green" alt="Forks" />
-  <img src="https://img.shields.io/github/stars/S-YED/atlas-mind?style=for-the-badge&color=yellow" alt="Stars" />
-</p>
-<p align="center">
-  <em>Contributors graph will appear once the repository is created and has commits</em>
+<a href="https://github.com/S-YED/atlas-mind/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=S-YED/atlas-mind" />
+</a>
+
 </p>
 
 ---
@@ -217,23 +211,23 @@ atlas-mind/
 
 ---
 
-<h2 align="center" style="color: #3B82F6;">🌟 SWOC 2024 🌟</h2>
+<h2 align="center" style="color: #3B82F6;">🌟 SWOC 2025 🌟</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SWOC-2024-orange?style=for-the-badge&logo=github" alt="SWOC 2024" />
+  <img src="https://img.shields.io/badge/SWOC-2025-orange?style=for-the-badge&logo=github" alt="SWOC 2025" />
   <img src="https://img.shields.io/badge/Open%20Source-❤️-red?style=for-the-badge" alt="Open Source" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" alt="Contributions Welcome" />
 </p>
 
-<h3 align="center">Atlas Mind is proudly participating in Social Winter of Code 2024!</h3>
+<h3 align="center">Atlas Mind is proudly participating in Social Winter of Code 2025!</h3>
 <p align="center">We welcome contributors of all skill levels to join our mission of making AI-powered education accessible to everyone.</p>
 
 ---
 
 <h2 align="center" style="color: #3B82F6;">⚠️ Important Note ⚠️</h2>
 
-**For SWOC 2024 Participants:**
-This project is part of Social Winter of Code 2024! We welcome contributors of all skill levels. Check our [CONTRIBUTING.md](CONTRIBUTING.md) for beginner-friendly issues and mentorship opportunities.
+**For SWOC 2025 Participants:**
+This project is part of Social Winter of Code 2025! We welcome contributors of all skill levels. Check our [CONTRIBUTING.md](CONTRIBUTING.md) for beginner-friendly issues and mentorship opportunities.
 
 ---
 
