@@ -71,7 +71,7 @@ const Index = () => {
                 <GraduationCap className="h-6 w-6 text-primary-foreground" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                EDAPT
+                Atlas Mind
               </span>
             </div>
             <Link to="/auth">
@@ -99,8 +99,8 @@ const Index = () => {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              EDAPT revolutionizes education with AI-driven adaptive learning that evolves with you. 
-              Experience hyper-personalized curriculum designed for trillion-dollar company standards.
+              Atlas Mind revolutionizes education with AI-driven adaptive learning that evolves with you. 
+              Experience hyper-personalized curriculum designed for modern learners.
             </p>
           </div>
 
@@ -144,7 +144,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold">
-              Why Choose EDAPT?
+              Why Choose Atlas Mind?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Built with cutting-edge AI technology and designed for the modern learner
@@ -198,7 +198,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="border-t border-border/40 py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center text-muted-foreground">
-          <p>&copy; 2025 EDAPT. Educational Adaptive Platform Technology. All rights reserved.</p>
+          <p>&copy; 2025 Atlas Mind. AI-Powered Learning Platform. All rights reserved.</p>
         </div>
       </footer>
     </div>

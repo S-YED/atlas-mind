@@ -58,9 +58,9 @@ export function AppSidebar() {
           {!isCollapsed && (
             <div>
               <h2 className="text-lg font-bold bg-gradient-to-r from-sidebar-primary to-primary-glow bg-clip-text text-transparent">
-                EDAPT
+                Atlas Mind
               </h2>
-              <p className="text-xs text-sidebar-foreground/70">EdTech Platform</p>
+              <p className="text-xs text-sidebar-foreground/70">AI Learning Platform</p>
             </div>
           )}
         </div>

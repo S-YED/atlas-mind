@@ -61,16 +61,16 @@ export default function Auth() {
             <GraduationCap className="h-8 w-8 text-primary-foreground" />
           </div>
           <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            EDAPT
+            Atlas Mind
           </h1>
           <p className="text-muted-foreground">
-            Educational Adaptive Platform Technology
+            AI-Powered Learning Platform
           </p>
         </div>
 
         <Card className="border-0 shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm">
           <CardHeader className="text-center">
-            <CardTitle>Welcome to EDAPT</CardTitle>
+            <CardTitle>Welcome to Atlas Mind</CardTitle>
             <CardDescription>
               Sign in to your account or create a new one to get started
             </CardDescription>

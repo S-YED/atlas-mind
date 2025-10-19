@@ -89,7 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     await supabase.auth.signOut();
     toast({
       title: "Signed out successfully",
-      description: "You have been logged out of EDAPT.",
+      description: "You have been logged out of Atlas Mind.",
     });
   };
 
