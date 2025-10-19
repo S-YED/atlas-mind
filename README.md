@@ -195,9 +195,9 @@ atlas-mind/
 
 <h3 align="center" style="color: #3B82F6;">🛠️ Open Source Contributors 🛠️</h3>
 <p align="center">
-  <a href="https://github.com/S-YED/atlas-mind/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=S-YED/atlas-mind" />
-  </a>
+<a href="https://github.com/S-YED/atlas-mind/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=S-YED/atlas-mind" />
+</a>
 </p>
 
 ---
