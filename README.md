@@ -10,7 +10,7 @@
 ---
 
 <h2 align="center" style="color: #3B82F6;">🔧 Tech Stack 🔧</h2>
-<p align="center">
+
 <div align="center">
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tailwind_css.png" alt="Tailwind CSS" title="Tailwind CSS"/></code>
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/supabase.png" alt="Supabase" title="Supabase"/></code>
@@ -18,11 +18,6 @@
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" title="React"/></code>
 	<code><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/node_js.png" alt="Node.js" title="Node.js"/></code>
 </div>
-</p>
-
-<h3 align="center" style="color: #8B5CF6;">
-    <a href="https://atlas-mind.netlify.app/" target="_blank">🌐 Live Demo 🌐</a>
-</h3>
 
 ---
 
