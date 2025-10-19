@@ -194,6 +194,7 @@ atlas-mind/
 <a href="https://github.com/S-YED/atlas-mind/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=S-YED/atlas-mind" />
 </a>
+
 </p>
 
 ---
@@ -213,20 +214,20 @@ atlas-mind/
 <h2 align="center" style="color: #3B82F6;">🌟 SWOC 2025 🌟</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SWOC-2024-orange?style=for-the-badge&logo=github" alt="SWOC 2025" />
+  <img src="https://img.shields.io/badge/SWOC-2025-orange?style=for-the-badge&logo=github" alt="SWOC 2025" />
   <img src="https://img.shields.io/badge/Open%20Source-❤️-red?style=for-the-badge" alt="Open Source" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge" alt="Contributions Welcome" />
 </p>
 
-<h3 align="center">Atlas Mind is proudly participating in Social Winter of Code 2024!</h3>
+<h3 align="center">Atlas Mind is proudly participating in Social Winter of Code 2025!</h3>
 <p align="center">We welcome contributors of all skill levels to join our mission of making AI-powered education accessible to everyone.</p>
 
 ---
 
 <h2 align="center" style="color: #3B82F6;">⚠️ Important Note ⚠️</h2>
 
-**For SWOC 2024 Participants:**
-This project is part of Social Winter of Code 2024! We welcome contributors of all skill levels. Check our [CONTRIBUTING.md](CONTRIBUTING.md) for beginner-friendly issues and mentorship opportunities.
+**For SWOC 2025 Participants:**
+This project is part of Social Winter of Code 2025! We welcome contributors of all skill levels. Check our [CONTRIBUTING.md](CONTRIBUTING.md) for beginner-friendly issues and mentorship opportunities.
 
 ---
 
