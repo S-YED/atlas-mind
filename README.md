@@ -1,6 +1,6 @@
 # 🧠 Atlas Mind - AI-Powered Learning Platform
 
-> **Personalized learning experience powered by AI. Master new skills with adaptive courses, progress tracking, and intelligent recommendations.**
+ **Personalized learning experience powered by AI. Master new skills with adaptive courses, progress tracking, and intelligent recommendations.**
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-username/atlas-mind)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/atlas-mind)
