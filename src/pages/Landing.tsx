@@ -229,7 +229,7 @@ export default function Landing() {
                   size="lg" 
                   variant="outline" 
                   className="text-lg px-12 py-6 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
-                  onClick={() => window.open('https://github.com/your-username/atlas-mind', '_blank')}
+                  onClick={() => window.open('https://github.com/S-YED/atlas-mind', '_blank')}
                 >
                   <Star className="mr-2 h-6 w-6" />
                   Star on GitHub
@@ -353,7 +353,7 @@ export default function Landing() {
                   size="lg" 
                   variant="outline" 
                   className="text-lg px-8 py-4 border-green-500/30 text-green-300 hover:bg-green-500/10"
-                  onClick={() => window.open('https://github.com/your-username/atlas-mind', '_blank')}
+                  onClick={() => window.open('https://github.com/S-YED/atlas-mind', '_blank')}
                 >
                   <Star className="mr-2 h-5 w-5" />
                   Star on GitHub
@@ -362,7 +362,7 @@ export default function Landing() {
                   size="lg" 
                   variant="outline" 
                   className="text-lg px-8 py-4 border-blue-500/30 text-blue-300 hover:bg-blue-500/10"
-                  onClick={() => window.open('https://github.com/your-username/atlas-mind/blob/main/CONTRIBUTING.md', '_blank')}
+                  onClick={() => window.open('https://github.com/S-YED/atlas-mind/blob/main/CONTRIBUTING.md', '_blank')}
                 >
                   <Users className="mr-2 h-5 w-5" />
                   Contribute
@@ -539,7 +539,7 @@ export default function Landing() {
                     size="lg" 
                     variant="outline" 
                     className="text-xl px-12 py-6 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
-                    onClick={() => window.open('https://github.com/your-username/atlas-mind', '_blank')}
+                    onClick={() => window.open('https://github.com/S-YED/atlas-mind', '_blank')}
                   >
                     <BookOpen className="mr-3 h-6 w-6" />
                     View Documentation

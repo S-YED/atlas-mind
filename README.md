@@ -5,7 +5,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=3B82F6&center=true&vCenter=true&width=435&lines=Learn+Smarter+with+AI;Personalized+Education;Open+Source+Platform;Built+by+Community;Join+the+Future+of+Learning+💯" alt="Typing SVG" />
 </p>
 
-// ![Atlas-Mind](https://socialify.git.ci/S-YED/atlas-mind/image?custom_description=AI-Powered+Learning+Platform+for+the+Modern+Learner%21&description=1&forks=1&issues=1&language=1&name=1&owner=1&pattern=Charlie+Brown&pulls=1&stargazers=1&theme=Dark)
+ ![Atlas-Mind](https://socialify.git.ci/S-YED/atlas-mind/image?custom_description=AI-Powered+Learning+Platform+for+the+Modern+Learner%21&description=1&forks=1&issues=1&language=1&name=1&owner=1&pattern=Charlie+Brown&pulls=1&stargazers=1&theme=Dark)
 
 ---
 
