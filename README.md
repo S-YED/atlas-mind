@@ -130,7 +130,7 @@
   <tr>
     <td style="padding: 10px; border: 1px solid #ddd;">
       <img src="./docs/images/landing.png" alt="Atlas Mind Landing" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
-      <p align="center" style="margin-top: 5px; font-style: italic;">Modern 3D landing page with AI focus</p>
+      <p align="center" style="margin-top: 5px; font-style: italic;">Immersive landing page with AI focus</p>
     </td>
     <td style="padding: 10px; border: 1px solid #ddd;">
       <img src="./docs/images/dashboard.png" alt="Atlas Mind Dashboard" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
