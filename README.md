@@ -185,7 +185,7 @@ atlas-mind/
   <tr>
     <td align="center">
       <a href="https://github.com/S-YED">
-        <img src="https://avatars.githubusercontent.com/u/51919866?v=4" width="100px;" alt="Project Owner"/><br />
+        <img src="https://github.com/S-YED.png" width="100px;" alt="Project Owner"/><br />
         <sub><b>S-YED</b></sub>
       </a><br />
       <sub>🚀 Project Creator & Lead Developer</sub>
@@ -195,9 +195,12 @@ atlas-mind/
 
 <h3 align="center" style="color: #3B82F6;">🛠️ Open Source Contributors 🛠️</h3>
 <p align="center">
-  <a href="https://github.com/S-YED/atlas-mind/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=S-YED/atlas-mind" />
-  </a>
+  <img src="https://img.shields.io/github/contributors/S-YED/atlas-mind?style=for-the-badge&color=blue" alt="Contributors" />
+  <img src="https://img.shields.io/github/forks/S-YED/atlas-mind?style=for-the-badge&color=green" alt="Forks" />
+  <img src="https://img.shields.io/github/stars/S-YED/atlas-mind?style=for-the-badge&color=yellow" alt="Stars" />
+</p>
+<p align="center">
+  <em>Contributors graph will appear once the repository is created and has commits</em>
 </p>
 
 ---
